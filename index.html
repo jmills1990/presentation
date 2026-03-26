@@ -777,12 +777,29 @@ body::after {
         Join a team building tools that help local businesses thrive.
       </div>
 
-      <a href="https://www.podium.com/careers" target="_blank"
-         style="display:inline-flex;align-items:center;gap:14px;background:rgba(175,78,48,0.12);border:1px solid rgba(175,78,48,0.4);border-radius:6px;padding:18px 36px;text-decoration:none;transition:background 0.2s;">
-        <div style="width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px var(--orange);flex-shrink:0;"></div>
-        <span style="font-family:'Roboto Mono',monospace;font-size:20px;font-weight:500;color:var(--cream);letter-spacing:0.5px;">podium.com/careers</span>
-      </a>
+      <div style="display:flex;align-items:center;gap:48px;margin-bottom:0;">
+        <a href="https://www.podium.com/careers" target="_blank"
+           style="display:inline-flex;align-items:center;gap:14px;background:rgba(175,78,48,0.12);border:1px solid rgba(175,78,48,0.4);border-radius:6px;padding:18px 36px;text-decoration:none;transition:background 0.2s;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px var(--orange);flex-shrink:0;"></div>
+          <span style="font-family:'Roboto Mono',monospace;font-size:20px;font-weight:500;color:var(--cream);letter-spacing:0.5px;">podium.com/careers</span>
+        </a>
+        <img src="qr-code.jpg" alt="QR Code" style="width:120px;height:120px;border-radius:8px;border:2px solid rgba(250,250,247,0.12);">
+      </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     sQ · QUESTIONS
+     left:3900 top:4820 w:1500 h:920
+══════════════════════════════════════════ -->
+<div class="slide" id="sQ" style="left:3900px;top:4820px;width:1500px;height:920px;">
+  <div class="card" style="display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:url('brand_dark_bg.png');background-size:cover;opacity:0.06;pointer-events:none;"></div>
+    <div style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange);"></div>
+    <div style="position:relative;z-index:1;text-align:center;">
+      <div style="font-size:96px;font-weight:700;color:var(--cream);line-height:1;">Questions?</div>
     </div>
   </div>
 </div>
@@ -819,7 +836,6 @@ body::after {
 const SLIDES = [
   { el:'s0', label:'Title',           cx:2250, cy:660,  zoom:0.92 },
   { el:'sP', label:'Presenters',      cx:4050, cy:660,  zoom:0.92 },
-  { el:'s5', label:'Podium Timeline', cx:2850, cy:2960, zoom:0.92 },
   { el:'sC', label:"Cooper's Story",  cx:5850, cy:660,  zoom:0.92 },
   { el:'sS', label:"Seth's Story",    cx:7650, cy:660,  zoom:0.92 },
   { el:'s1', label:"John's Story",    cx:1050, cy:1800, zoom:0.92 },
@@ -827,8 +843,10 @@ const SLIDES = [
   { el:'s3', label:'Team Structure',  cx:4650, cy:1800, zoom:0.92 },
   { el:'s6', label:'AI Landscape',    cx:1050, cy:4120, zoom:0.92 },
   { el:'s8', label:'Interviewing',    cx:4650, cy:4120, zoom:0.92 },
-  { el:'sR', label:'Roles',            cx:1050, cy:5280, zoom:0.92 },
+  { el:'sR', label:'Roles',           cx:1050, cy:5280, zoom:0.92 },
   { el:'s9', label:'Join Us',         cx:2850, cy:5280, zoom:0.92 },
+  { el:'sQ', label:'Questions',       cx:4650, cy:5280, zoom:0.92 },
+  { el:'s5', label:'Podium Timeline', cx:2850, cy:2960, zoom:0.92 },
 ];
 
 const OVERVIEW = { cx:4250, cy:2950, zoom:0.15 };
@@ -837,7 +855,7 @@ let current = 0;
 let overviewActive = false;
 
 // ── Timeline ──
-const TL_SLIDE_IDX = 2;
+const TL_SLIDE_IDX = 12;
 let tlStep = 0;
 
 // Colors reference the CSS variables via getComputedStyle
